@@ -1,0 +1,92 @@
+/* =========================================
+   HALAMAN SERVICE
+   ========================================= */
+.service-section {
+    padding: 150px 5% 80px;
+    background-color: #fdfdfd;
+    min-height: 100vh;
+}
+
+.service-container {
+    max-width: 1920px; /* Samakan dengan desain desktop-mu */
+    margin: 0 auto;
+}
+
+.service-container h1 {
+    font-size: 3.5rem; /* Ukuran font besar sesuai desain */
+    margin-bottom: 50px;
+    color: #111;
+}
+
+/* --- LOGIKA GRID 4 KOLOM --- */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Membagi lurus jadi 4 kolom sama besar */
+    gap: 50px; /* Jarak antar kotak */
+}
+
+.service-card {
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transisi diubah mengikuti filter */
+    cursor: pointer;
+    /* border-radius: 30px; <--- (HAPUS BARIS INI, kita udah gak butuh lagi) */
+}
+
+/* Biar gambarnya nge-pas 100% dengan bungkus kotaknya */
+.service-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Kosmetik: Efek melayang saat kursor diarahkan ke kotak */
+.service-card:hover {
+    transform: translateY(-10px);
+    filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.15)); 
+}
+
+/* =========================================
+   RESPONSIF UNTUK TABLET & HP
+   ========================================= */
+
+/* Kalau layar seukuran HP, ubah jadi 2 kolom tapi lebih compact */
+@media screen and (max-width: 900px) {
+    .service-section {
+        /* Tambah padding kiri-kanan jadi 12% biar area grid-nya menyempit ke tengah */
+        padding: 100px 12% 60px; 
+    }
+
+    .service-container h1 {
+        font-size: 2.2rem; /* Kecilin ukuran judul biar pas di layar HP */
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom */
+        gap: 15px; /* Rapatkan dikit jarak antar kotaknya */
+        
+        /* TRICK BIAR NYAMAN: Batasi lebar total grid-nya */
+        max-width: 450px; 
+        margin: 0 auto; /* Pastikan grid-nya tetap di tengah */
+    }
+
+    .service-card {
+        /* Kasih nafas tambahan di dalam pembungkusnya biar gambarnya nggak mepet */
+        padding: 5px; 
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px); /* Kurangi efek melayangnya di HP biar nggak lebay */
+    }
+}
+
+/* Kalau layarnya HP-nya kecil banget (misal iPhone lama) */
+@media screen and (max-width: 400px) {
+    .service-section {
+        padding: 100px 8% 60px; /* Balikin padding-nya agak lebar dikit biar gambar nggak terlalu kecil */
+    }
+    
+    .service-grid {
+        gap: 10px;
+    }
+}

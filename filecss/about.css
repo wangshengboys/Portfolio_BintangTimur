@@ -1,0 +1,137 @@
+/* =======================================================================
+   ========================== HALAMAN ABOUT ==============================
+   ======================================================================*/
+
+/* --- Modifikasi Header Khusus About --- */
+.header-about {
+    background-color: #ffffff; 
+    border-bottom: 8px solid #d8a01a; 
+}
+
+/* --- Halaman About --- */
+.about-section {
+    background-color: #d8a01a;
+    color: #ffffff;
+    margin-top: 100px; 
+    padding: 60px 5% 80px; 
+    min-height: calc(100vh - 100px);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-bg-text {
+    position: absolute;
+    bottom: -30px;
+    right: -20px;
+    font-size: 8rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.15); 
+    white-space: nowrap;
+    z-index: 1; 
+    user-select: none; 
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1920px;
+    margin: 0 auto;
+    gap: 60px;
+    position: relative;
+    z-index: 2; 
+}
+
+.about-left {
+    flex: 1.9;
+    transform: translateY(40px); 
+}
+
+.about-left h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.about-left p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.about-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.about-table td {
+    padding: 10px 0;
+    font-size: 1.1rem;
+}
+
+.about-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    transform: translateY(10px);
+}
+
+.about-right img {
+    width: 75%; 
+    max-width: 400px; 
+    height: auto;
+    object-fit: contain;
+}
+
+/* ==============================================================*/
+/* ------------------- RESPONSIF HALAMAN ABOUT ----------------- */
+/* ==============================================================*/
+
+@media screen and (max-width: 900px) {
+    .about-section {
+        padding-top: 50px;
+    }
+
+    .about-container {
+        flex-direction: column; 
+    }
+
+    .about-left, .about-right {
+        display: contents;
+    }
+
+    .about-left h1 {
+        order: 1; 
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .about-right img {
+        order: 2; 
+        max-width: 280px;
+        align-self: center; 
+        margin-bottom: 30px; 
+    }
+
+    .about-left p {
+        order: 3; 
+        margin-bottom: 30px;
+    }
+
+    .about-table {
+        order: 4; 
+        margin-bottom: 40px;
+    }
+
+    .about-table td {
+        display: block; 
+        padding: 5px 0;
+        text-align: center; 
+    }
+
+    .about-bg-text {
+        font-size: 4rem;
+        bottom: 10px;
+        right: 10px;
+    }
+}

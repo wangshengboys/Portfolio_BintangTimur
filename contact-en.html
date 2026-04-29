@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bintang Timur - Portfolio</title>
+    <link rel="stylesheet" href="filecss/style.css">
+    <link rel="stylesheet" href="filecss/contact.css"> 
+</head>
+<header class="header-glass header-about">
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo Bintang">
+            </div>
+
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label> <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index-en.html">Home</a></li>
+                    <li><a href="about-en.html">About</a></li>
+                    <li><a href="project-en.html">Project</a></li>
+                    <li><a href="service-en.html">Services</a></li>
+                    <li><a href="contact-en.html" class="active">Contact</a></li>
+                </ul>
+                <div class="lang-btn">
+                    <a href="contact.html" class="btn-lang">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        EN
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+<body>
+
+    <main>
+        <section class="contact-section">
+            
+            <input type="radio" name="contact-tab" id="tab-email" checked>
+            <input type="radio" name="contact-tab" id="tab-wa">
+
+            <div class="contact-box">
+                
+                <div class="contact-info">
+                    <h1>Let’s talk<br>on something <strong>great</strong><br>together</h1>
+                    
+                    <ul class="info-list">
+                        <li><img src="images/icon-mail-line.png" alt="Email"> bintangtimursip@gmail.com</li>
+                        <li><img src="images/icon-wa-line.png" alt="WA"> +62 895-3140-8593</li>
+                        <li><img src="images/icon-loc-line.png" alt="Location"> Jawa Barat, Depok, Pancoran Mas</li>
+                    </ul>
+                </div>
+
+                <div class="contact-card">
+                    
+                    <div class="tabs">
+                        <label for="tab-email" class="tab-btn btn-email">
+                            <img src="images/icon-mail-line.png" alt="Tab Email">
+                        </label>
+                        <label for="tab-wa" class="tab-btn btn-wa">
+                            <img src="images/icon-wa-line.png" alt="Tab WA">
+                        </label>
+                    </div>
+
+                    <div class="card-content content-email">
+                        <h3>I’m Intrested In :</h3>
+                        
+                        <form action="https://formspree.io/f/mojyelna" method="POST">
+                            <div class="input-group">
+                                <label>Service</label>
+                                <input type="text" name="service" placeholder="Type Services" required>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label>Your Name</label>
+                                <input type="text" name="name" placeholder="Name" required>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label>Your Email</label>
+                                <input type="email" name="email" placeholder="example@gmail.com" required>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label>Message</label>
+                                <textarea name="message" rows="4" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Kirim</button>
+                        </form>
+                    </div>
+
+                    <div class="card-content content-wa">
+                        <div class="wa-profil-box">
+                            <img src="images/foto-profil-bulat.png" alt="Bintang" class="foto-bulat">
+                            <p class="wa-teks-profil">
+                                <span class="teks-hijau">Hi</span><br>
+                                <span class="teks-hitam">what can i</span><br>
+                                <span class="teks-hijau">Help You</span>
+                            </p>
+                        </div>
+                        
+                        <a href="https://wa.me/6289531408593" target="_blank" class="wa-qr-box">
+                            <div class="wa-text">
+                                <div class="wa-logo-title">
+                                    <img src="images/icon-wa-logo.png" alt="WhatsApp"> 
+                                </div>
+                                <div class="wa-scan-text">
+                                    <span class="teks-hitam">Scan</span> <span class="teks-putih">Here !</span>
+                                </div>
+                            </div>
+                            <img src="images/qr-code.png" alt="QR Code" class="qr-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+/* --- TATA LETAK HALAMAN PROJECT --- */
+.project-section {
+    padding: 150px 5% 80px;
+    background-color: #fdfdfd;
+    min-height: 100vh;
+}
+
+.project-container {
+    max-width: 1920px; /* Samakan dengan desainmu */
+    margin: 0 auto;
+}
+
+.project-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.project-header p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 1920px;
+    margin-bottom: 60px;
+}
+
+/* --- MENYEMBUNYIKAN RADIO BUTTON UTAMA --- */
+input[name="kategori"] {
+    display: none;
+}
+
+/* --- DESAIN MENU FILTER --- */
+.filter-menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.filter-menu label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #111;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Logika Mewarnai Label yang Aktif: 
+   Jika radio button dicentang, cari label dengan ID yang sama lalu ubah warnanya */
+#filter-all:checked ~ .filter-menu label[for="filter-all"],
+#filter-2d:checked ~ .filter-menu label[for="filter-2d"],
+#filter-3d:checked ~ .filter-menu label[for="filter-3d"],
+#filter-uiux:checked ~ .filter-menu label[for="filter-uiux"],
+#filter-app:checked ~ .filter-menu label[for="filter-app"] {
+    color: #d8a01a; /* Warna kuning emas */
+}
+
+/* --- TATA LETAK GRID FOTO --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.4s ease;
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px; /* Seragamkan tinggi gambar thumbnail */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Efek zoom saat kursor diarahkan ke gambar */
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* --- LOGIKA AJAIB FILTER KATEGORI --- */
+/* 1. Sembunyikan semua kartu secara default (KECUALI JIKA 'ALL' DIPILIH) */
+.project-card {
+    display: none; 
+}
+
+/* 2. Jika 'ALL' dicentang, tampilkan semua */
+#filter-all:checked ~ .project-grid .project-card {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* 3. Jika kategori spesifik dicentang, tampilkan hanya yang class-nya sesuai */
+#filter-2d:checked ~ .project-grid .kat-2d,
+#filter-3d:checked ~ .project-grid .kat-3d,
+#filter-uiux:checked ~ .project-grid .kat-uiux,
+#filter-app:checked ~ .project-grid .kat-app {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* =========================================
+   BLOK C: CSS UNTUK POP-UP LIGHTBOX & SLIDER
+   ========================================= */
+
+/* Sembunyikan radio button slider */
+input[name="slider"] {
+    display: none;
+}
+
+/* --- Tampilan Utama Lightbox --- */
+.lightbox {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Sedikit lebih gelap biar elegan */
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    display: none; /* Awalnya sembunyi */
+    justify-content: center;
+    align-items: center;
+}
+
+/* KUNCI 1: Munculkan lightbox jika saklar p1-slide1 atau p1-slide2 nyala */
+#p1-slide1:checked ~ .lightbox,
+#p1-slide2:checked ~ .lightbox, 
+#p1-slide3:checked ~ .lightbox, 
+
+#p2-slide1:checked ~ .lightbox,
+#p2-slide2:checked ~ .lightbox,
+#p2-slide3:checked ~ .lightbox,
+
+#p3-slide1:checked ~ .lightbox,
+#p3-slide2:checked ~ .lightbox,
+#p3-slide3:checked ~ .lightbox,
+
+#p4-slide1:checked ~ .lightbox,
+#p4-slide2:checked ~ .lightbox,
+
+#p5-slide1:checked ~ .lightbox,
+#p5-slide2:checked ~ .lightbox,
+
+#p6-slide1:checked ~ .lightbox,
+#p6-slide2:checked ~ .lightbox,
+#p6-slide3:checked ~ .lightbox,
+#p6-slide4:checked ~ .lightbox,
+
+#p7-slide1:checked ~ .lightbox,
+#p7-slide2:checked ~ .lightbox,
+#p7-slide3:checked ~ .lightbox,
+#p7-slide4:checked ~ .lightbox,
+#p7-slide5:checked ~ .lightbox,
+#p7-slide6:checked ~ .lightbox{
+    display: flex;
+}
+
+/* Tombol Silang (X) */
+.close-btn {
+    position: absolute;
+    top: 30px; right: 50px;
+    font-size: 3rem; color: white;
+    cursor: pointer; z-index: 2001;
+    transition: color 0.3s;
+}
+.close-btn:hover { color: #d8a01a; }
+
+/* --- Konten Slide --- */
+.lightbox-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 85vh;
+}
+
+.slide-group { display: none; }
+.slide { display: none; text-align: center; animation: fadeIn 0.4s ease; }
+.slide img {
+    max-width: 100%; max-height: 85vh;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* KUNCI 2: Tampilkan grup Project 1 jika saklarnya nyala */
+#p1-slide1:checked ~ .lightbox .p1-group,
+#p1-slide2:checked ~ .lightbox .p1-group, 
+#p1-slide3:checked ~ .lightbox .p1-group,
+
+#p2-slide1:checked ~ .lightbox .p2-group,
+#p2-slide2:checked ~ .lightbox .p2-group, 
+#p2-slide3:checked ~ .lightbox .p2-group,
+
+#p3-slide1:checked ~ .lightbox .p3-group,
+#p3-slide2:checked ~ .lightbox .p3-group, 
+#p3-slide3:checked ~ .lightbox .p3-group,
+
+#p4-slide1:checked ~ .lightbox .p4-group, 
+#p4-slide2:checked ~ .lightbox .p4-group,
+
+#p5-slide1:checked ~ .lightbox .p5-group, 
+#p5-slide2:checked ~ .lightbox .p5-group,
+
+#p6-slide1:checked ~ .lightbox .p6-group, 
+#p6-slide2:checked ~ .lightbox .p6-group,
+#p6-slide3:checked ~ .lightbox .p6-group, 
+#p6-slide4:checked ~ .lightbox .p6-group,
+
+#p7-slide1:checked ~ .lightbox .p7-group, 
+#p7-slide2:checked ~ .lightbox .p7-group,
+#p7-slide3:checked ~ .lightbox .p7-group, 
+#p7-slide4:checked ~ .lightbox .p7-group,
+#p7-slide5:checked ~ .lightbox .p7-group, 
+#p7-slide6:checked ~ .lightbox .p7-group{
+    display: block;
+}
+
+/* KUNCI 3: Tampilkan gambar yang spesifik */
+#p1-slide1:checked ~ .lightbox .p1-s1 { display: block; }
+#p1-slide2:checked ~ .lightbox .p1-s2 { display: block; }
+#p1-slide3:checked ~ .lightbox .p1-s3 { display: block; }
+
+#p2-slide1:checked ~ .lightbox .p2-s1 { display: block; }
+#p2-slide2:checked ~ .lightbox .p2-s2 { display: block; }
+#p2-slide3:checked ~ .lightbox .p2-s3 { display: block; }
+
+#p3-slide1:checked ~ .lightbox .p3-s1 { display: block; }
+#p3-slide2:checked ~ .lightbox .p3-s2 { display: block; }
+#p3-slide3:checked ~ .lightbox .p3-s3 { display: block; }
+
+#p4-slide1:checked ~ .lightbox .p4-s1 { display: block; }
+#p4-slide2:checked ~ .lightbox .p4-s2 { display: block; }
+
+#p5-slide1:checked ~ .lightbox .p5-s1 { display: block; }
+#p5-slide2:checked ~ .lightbox .p5-s2 { display: block; }
+
+#p6-slide1:checked ~ .lightbox .p6-s1 { display: block; }
+#p6-slide2:checked ~ .lightbox .p6-s2 { display: block; }
+#p6-slide3:checked ~ .lightbox .p6-s3 { display: block; }
+#p6-slide4:checked ~ .lightbox .p6-s4 { display: block; }
+
+#p7-slide1:checked ~ .lightbox .p7-s1 { display: block; }
+#p7-slide2:checked ~ .lightbox .p7-s2 { display: block; }
+#p7-slide3:checked ~ .lightbox .p7-s3 { display: block; }
+#p7-slide4:checked ~ .lightbox .p7-s4 { display: block; }
+#p7-slide5:checked ~ .lightbox .p7-s5 { display: block; }
+#p7-slide6:checked ~ .lightbox .p7-s6 { display: block; }
+
+/* Tombol Navigasi Kiri Kanan */
+.nav-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    font-size: 2.5rem; color: white; background: rgba(255, 255, 255, 0.1);
+    padding: 10px 25px; cursor: pointer; border-radius: 10px; user-select: none;
+    transition: background 0.3s;
+}
+.nav-btn:hover { background: rgba(216, 160, 26, 0.8); }
+.prev-btn { left: -80px; }
+.next-btn { right: -80px; }
+
+/* --- EXPERIENCED APPS & TOOLS --- */
+.tools-section {
+    text-align: center;
+    margin-top: 80px;  /* Jarak dari foto-foto proyek di atasnya */
+    margin-bottom: 20px;
+    padding-top: 40px;
+    /* border-top: 1px solid #eaeaea; (Hapus tanda komentar kalau king mau ada garis halus pemisah di atasnya) */
+}
+
+.tools-section h3 {
+    font-size: 1.1rem;
+    color: #888888; /* Warna abu-abu sesuai desainmu king */
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.tools-section img {
+    max-width: 600px; /* Batas maksimal lebar gambar, bisa king sesuaikan misal 700px atau 500px */
+    width: 90%; /* Biar responsif kalau dibuka di HP */
+    height: auto;
+    object-fit: contain;
+}
