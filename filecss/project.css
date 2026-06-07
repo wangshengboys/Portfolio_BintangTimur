@@ -285,3 +285,43 @@ input[name="slider"] {
     height: auto;
     object-fit: contain;
 }
+
+/* =========================================================
+   RESPONSIF MOBILE: UBAH LIGHTBOX SLIDER JADI SCROLL KE BAWAH
+   ========================================================= */
+@media screen and (max-width: 900px) {
+    /* 1. Area konten pop-up diubah jadi bisa di-scroll */
+    .lightbox-content {
+        overflow-y: auto; /* Mengaktifkan scroll vertikal */
+        max-height: 90vh; /* Batas tinggi scroll area */
+        width: 95%; /* Lebarkan area di layar HP */
+        padding-right: 10px; /* Kasih nafas dikit buat scrollbar */
+        padding-bottom: 30px;
+    }
+
+    /* 2. Sembunyikan saklar panah Kiri dan Kanan */
+    .nav-btn {
+        display: none !important;
+    }
+
+    /* 3. Paksa SEMUA slide di dalam grup yang diklik untuk muncul berbarengan */
+    .lightbox .slide-group .slide {
+        display: block !important; 
+        margin-bottom: 25px; /* Jarak antar gambar dari atas ke bawah */
+        animation: fadeIn 0.6s ease; /* Transisi halus pas pertama dibuka */
+    }
+
+    /* 4. Sesuaikan ukuran gambar agar nge-pas di layar HP */
+    .slide img {
+        width: 100%; /* Memaksa gambar melebar full di HP */
+        height: auto;
+        max-height: none; /* Buang batas tinggi bawaan desktop agar proporsional */
+    }
+
+    /* 5. Rapikan posisi tombol Close (X) di HP */
+    .close-btn {
+        top: 15px;
+        right: 25px;
+        font-size: 2.5rem;
+    }
+}
