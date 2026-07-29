@@ -12,9 +12,8 @@
 .about-section {
     background-color: #d8a01a;
     color: #ffffff;
-    margin-top: 100px; 
-    padding: 60px 5% 80px; 
-    min-height: calc(100vh - 100px);
+    padding: 150px 5% 80px; 
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
 }

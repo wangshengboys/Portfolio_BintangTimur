@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bintang Timur - Portfolio</title>
     <link rel="stylesheet" href="filecss/style.css">
+    <link rel="stylesheet" href="filecss/about.css">
+    <link rel="stylesheet" href="filecss/project.css">
+    <link rel="stylesheet" href="filecss/service.css">
+    <link rel="stylesheet" href="filecss/contact.css">
 </head>
 <body>
 
@@ -17,11 +21,11 @@
             <input type="checkbox" id="menu-toggle" class="menu-checkbox">
             <label for="menu-toggle" class="menu-icon">&#9776;</label> <div class="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about-en.html">About</a></li>
-                    <li><a href="project-en.html">Project</a></li>
-                    <li><a href="service-en.html">Services</a></li>
-                    <li><a href="contact-en.html">Contact</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="lang-btn">
                     <a href="index-id.html" class="btn-lang">
@@ -38,7 +42,7 @@
     </header>
 
     <main>
-        <section class="hero">
+<section id="home" class="hero">
             <div class="hero-left">
                 <img src="images/hello-en.png" alt="Hello" class="hello-img">
                 
@@ -77,7 +81,439 @@
                 <img src="images/foto-profil.webp" alt="Bintang Timur" class="profile-img">
             </div>
         </section>
+
+<section id="about" class="about-section">
+            <div class="about-bg-text">IM CENTAURY</div>
+            
+            <div class="about-container">
+                <div class="about-left">
+                    <h1>About Me</h1>
+                    <p>I am an Informatics Engineering student at Paramadina University with a strong artistic background, rooted in my vocational high school education in Multimedia. With over 5 years of experience as a designer, I have developed a solid foundation in visual aesthetics and communication. My interest in 3D began through my passion for gaming, particularly war-themed games, which inspired me to explore and create 3D assets, especially for game development. I have now accumulated over 3 years of experience in 3D modeling and asset creation. Currently, I am also sharpening my skills in the field of information technology, focusing on frontend development and user experience (UX). Although I have been in this field for about a year, I have already worked on a real-world project: a social media application that I continue to develop. I am highly motivated to keep learning, combining visual creativity with technical skills, and building digital solutions that are not only functional but Also visually compelling.</p>
+
+                    <table class="about-table">
+                        <tr>
+                            <td><strong>Birthday</strong></td>
+                            <td>June 2004</td>
+                            <td><strong>Phone</strong></td>
+                            <td>+62 895-3140-8593</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Age</strong></td>
+                            <td>21</td>
+                            <td><strong>Email</strong></td>
+                            <td>bintangtimursip@gmail.com</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="about-right">
+                        <img src="images/foto-about.webp" alt="Profil Bintang">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="project" class="project-section">
+            <div class="project-container">
+                
+                <div class="project-header">
+                    <h1>Project</h1>
+                    <p>I have completed over 100+ projects across various creative and digital development fields. My experience includes 2D Design, 3D Design, UI/UX Design, and Mobile Frontend Design. Each project is crafted with a strong focus on detail, aesthetics, and functionality, while aligning with user needs and modern design trends.</p>
+                </div>
+
+                <input type="radio" id="filter-all" name="kategori" checked>
+                <input type="radio" name="slider" id="close-slider" checked> 
+
+                <!--Project 1-->
+                <input type="radio" name="slider" id="p1-slide1">
+                <input type="radio" name="slider" id="p1-slide2">
+                <input type="radio" name="slider" id="p1-slide3">
+
+                <!--Project 2-->
+                <input type="radio" name="slider" id="p2-slide1">
+                <input type="radio" name="slider" id="p2-slide2">
+                <input type="radio" name="slider" id="p2-slide3">
+
+                <!--Project 3-->
+                <input type="radio" name="slider" id="p3-slide1">
+                <input type="radio" name="slider" id="p3-slide2">
+                <input type="radio" name="slider" id="p3-slide3">
+
+                <!--Project 4-->
+                <input type="radio" name="slider" id="p4-slide1">
+                <input type="radio" name="slider" id="p4-slide2">
+
+                <!--Project 5-->
+                <input type="radio" name="slider" id="p5-slide1">
+                <input type="radio" name="slider" id="p5-slide2">
+
+                <!--Project 6-->
+                <input type="radio" name="slider" id="p6-slide1">
+                <input type="radio" name="slider" id="p6-slide2">
+                <input type="radio" name="slider" id="p6-slide3">
+                <input type="radio" name="slider" id="p6-slide4">
+
+                <input type="radio" name="slider" id="p7-slide1">
+                <input type="radio" name="slider" id="p7-slide2">
+                <input type="radio" name="slider" id="p7-slide3">
+                <input type="radio" name="slider" id="p7-slide4">
+                <input type="radio" name="slider" id="p7-slide5">
+                <input type="radio" name="slider" id="p7-slide6">
+
+                <input type="radio" id="filter-2d" name="kategori">
+                <input type="radio" id="filter-3d" name="kategori">
+                <input type="radio" id="filter-uiux" name="kategori">
+                <input type="radio" id="filter-app" name="kategori">
+
+                <div class="filter-menu">
+                    <label for="filter-all">ALL</label>
+                    <label for="filter-2d">2D</label>
+                    <label for="filter-3d">3D</label>
+                    <label for="filter-uiux">UI/UX</label>
+                    <label for="filter-app">APP</label>
+                </div>
+
+                <div class="project-grid">
+                    <div class="project-card kat-2d">
+                        <label for="p1-slide1">
+                            <img src="images/proj1-1.webp" alt="Desain">
+                        </label>
+                    </div>
+                    
+                    <div class="project-card kat-2d">
+                        <label for="p2-slide1">
+                            <img src="images/proj2-1.webp" alt="Desain">
+                        </label>
+                    </div>
+
+                    <div class="project-card kat-2d">
+                        <label for="p3-slide1">
+                            <img src="images/proj-3.1.webp" alt="Desain">
+                        </label>
+                    </div>
+
+                    <div class="project-card kat-3d">
+                        <label for="p4-slide1">  
+                            <img src="images/proj4-1.webp" alt="3D Model">
+                        </label>
+                    </div>
+
+                    <div class="project-card kat-3d">
+                        <label for="p5-slide1">
+                            <img src="images/proj5-1.webp" alt="3D Model">
+                        </label>
+                    </div>
+
+                    <div class="project-card kat-3d">
+                        <label for="p6-slide1">
+                            <img src="images/proj6-1.webp" alt="3D Model">
+                        </label>
+                    </div> 
+                    
+                    <div class="project-card kat-uiux">
+                        <label for="p7-slide1">
+                            <img src="images/proj7-1.webp" alt="UI/UX">
+                        </label>
+                    </div>  
+
+                </div>
+                
+                <div class="tools-section">
+                    <h3>Experienced Apps & Tools</h3>
+                    <img src="images/tools-group.png" alt="Experienced Apps and Tools">
+                </div>
+
+                <div class="lightbox">
+                        <label for="close-slider" class="close-btn">&times;</label>
+                        
+                        <div class="lightbox-content">
+                            
+                            <!--Group Project 1-->
+                            <div class="slide-group p1-group">
+                                
+                                <div class="slide p1-s1">
+                                    <img src="images/proj1-1.webp" alt="Detail 1">
+                                    <label for="p1-slide2" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+    
+                                <div class="slide p1-s2">
+                                    <label for="p1-slide1" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj1-2.webp" alt="Detail 2">
+                                    <label for="p1-slide3" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+
+                                <div class="slide p1-s3">
+                                    <label for="p1-slide2" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj1-3.webp" alt="Detail 3">
+                                </div>
+                            </div>
+
+                            <!--Group Project 2-->
+                            <div class="slide-group p2-group">
+                                
+                                <div class="slide p2-s1">
+                                    <img src="images/proj2-1.webp" alt="Detail 1">
+                                    <label for="p2-slide2" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+    
+                                <div class="slide p2-s2">
+                                    <label for="p2-slide1" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj2-2.webp" alt="Detail 2">
+                                    <label for="p2-slide3" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+
+                                <div class="slide p2-s3">
+                                    <label for="p2-slide2" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj2-3.webp" alt="Detail 3">
+                                </div>
+                            </div>
+
+                            <!--Group Project 3-->
+                            <div class="slide-group p3-group">
+                                
+                                <div class="slide p3-s1">
+                                    <img src="images/proj-3.1.webp" alt="Detail 1">
+                                    <label for="p3-slide2" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+    
+                                <div class="slide p3-s2">
+                                    <label for="p3-slide1" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj3-2.webp" alt="Detail 2">
+                                    <label for="p3-slide3" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+
+                                <div class="slide p3-s3">
+                                    <label for="p3-slide2" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj3-3.webp" alt="Detail 3">
+                                </div>
+                            </div>
+
+                            <!--Group Project 4-->
+                            <div class="slide-group p4-group">
+                                
+                                <div class="slide p4-s1">
+                                    <img src="images/proj4-1.webp" alt="Detail 1">
+                                    <label for="p4-slide2" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+    
+                                <div class="slide p4-s2">
+                                    <img src="images/proj4-2.webp" alt="Detail 2">
+                                    <label for="p4-slide1" class="nav-btn prev-btn">&#10094;</label>
+                                </div>
+                            </div>
+
+                            <!--Group Project 5-->
+                            <div class="slide-group p5-group">
+                                
+                                <div class="slide p5-s1">
+                                    <img src="images/proj5-1.webp" alt="Detail 1">
+                                    <label for="p5-slide2" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+    
+                                <div class="slide p5-s2">
+                                    <img src="images/proj5-2.webp" alt="Detail 2">
+                                    <label for="p5-slide1" class="nav-btn prev-btn">&#10094;</label>
+                                </div>
+                            </div>
+
+                            <!--Group Project 6-->
+                            <div class="slide-group p6-group">
+                                
+                                <div class="slide p6-s1">
+                                    <img src="images/proj6-1.webp" alt="Detail 1">
+                                    <label for="p6-slide2" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+    
+                                <div class="slide p6-s2">
+                                    <label for="p6-slide1" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj6-2.webp" alt="Detail 2">
+                                    <label for="p6-slide3" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+
+                                 <div class="slide p6-s3">
+                                    <label for="p6-slide2" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj6-3.webp" alt="Detail 2">
+                                    <label for="p6-slide4" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+
+                                <div class="slide p6-s4">
+                                    <label for="p6 slide3" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj6-4.webp" alt="Detail 3">
+                                </div>
+                            </div>
+
+                            <div class="slide-group p7-group">
+                                
+                                <div class="slide p7-s1">
+                                    <img src="images/proj7-1.webp" alt="Detail 1">
+                                    <label for="p7-slide2" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+    
+                                <div class="slide p7-s2">
+                                    <label for="p7-slide1" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj7-2.webp" alt="Detail 2">
+                                    <label for="p7-slide3" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+
+                                 <div class="slide p7-s3">
+                                    <label for="p7-slide2" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj7-3.webp" alt="Detail 3">
+                                    <label for="p7-slide4" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+
+                                <div class="slide p7-s4">
+                                    <label for="p7-slide3" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj7-4.webp" alt="Detail 4">
+                                    <label for="p7-slide5" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+
+                                <div class="slide p7-s5">
+                                    <label for="p7-slide4" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj7-5.webp" alt="Detail 5">
+                                    <label for="p7-slide6" class="nav-btn next-btn">&#10095;</label>
+                                </div>
+
+                                <div class="slide p7-s6">
+                                    <label for="p7-slide5" class="nav-btn prev-btn">&#10094;</label>
+                                    <img src="images/proj7-6.webp" alt="Detail 6">
+                                </div>
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+        </section>
+
+<section id="service" class="service-section">
+            <div class="service-container">
+                
+                <h1>Services</h1>
+
+                <div class="service-grid">
+                    <div class="service-card">
+                        <img src="images/serv-1.png" alt="Logo Design">
+                    </div>
+                    <div class="service-card">
+                        <img src="images/serv-2.png" alt="Ad Design">
+                    </div>
+                    <div class="service-card">
+                        <img src="images/serv-3.png" alt="Digital Imaging">
+                    </div>
+                    <div class="service-card">
+                        <img src="images/serv-4.png" alt="3D Modeling">
+                    </div>
+                    <div class="service-card">
+                        <img src="images/serv-5.png" alt="Game Design">
+                    </div>
+                    <div class="service-card">
+                        <img src="images/serv-6.png" alt="UI/UX">
+                    </div>
+                    <div class="service-card">
+                        <img src="images/serv-7.png" alt="Frontend Developing">
+                    </div>
+                    <div class="service-card">
+                        <img src="images/serv-8.png" alt="Backend Developing">
+                    </div>
+                    <div class="service-card">
+                        <img src="images/serv-9.png" alt="Backend Developing">
+                    </div>
+                    <div class="service-card">
+                        <img src="images/serv-10.png" alt="Backend Developing">
+                    </div>
+                    <div class="service-card">
+                        <img src="images/serv-11.png" alt="Backend Developing">
+                    </div>
+                    <div class="service-card">
+                        <img src="images/serv-12.png" alt="Backend Developing">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+<section id="contact" class="contact-section">
+            
+            <input type="radio" name="contact-tab" id="tab-email" checked>
+            <input type="radio" name="contact-tab" id="tab-wa">
+
+            <div class="contact-box">
+                
+                <div class="contact-info">
+                    <h1>Let’s talk<br>on something <strong>great</strong><br>together</h1>
+                    
+                    <ul class="info-list">
+                        <li><img src="images/icon-mail-line.png" alt="Email"> bintangtimursip@gmail.com</li>
+                        <li><img src="images/icon-wa-line.png" alt="WA"> +62 895-3140-8593</li>
+                        <li><img src="images/icon-loc-line.png" alt="Location"> Jawa Barat, Depok, Pancoran Mas</li>
+                    </ul>
+                </div>
+
+                <div class="contact-card">
+                    
+                    <div class="tabs">
+                        <label for="tab-email" class="tab-btn btn-email">
+                            <img src="images/icon-mail-line.png" alt="Tab Email">
+                        </label>
+                        <label for="tab-wa" class="tab-btn btn-wa">
+                            <img src="images/icon-wa-line.png" alt="Tab WA">
+                        </label>
+                    </div>
+
+                    <div class="card-content content-email">
+                        <h3>I’m Intrested In :</h3>
+                        
+                        <form action="https://formspree.io/f/mojyelna" method="POST">
+                            <div class="input-group">
+                                <label>Service</label>
+                                <input type="text" name="service" placeholder="Type Services" required>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label>Your Name</label>
+                                <input type="text" name="name" placeholder="Name" required>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label>Your Email</label>
+                                <input type="email" name="email" placeholder="example@gmail.com" required>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label>Message</label>
+                                <textarea name="message" rows="4" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Kirim</button>
+                        </form>
+                    </div>
+
+                    <div class="card-content content-wa">
+                        <div class="wa-profil-box">
+                            <img src="images/foto-profil-bulat.png" alt="Bintang" class="foto-bulat">
+                            <p class="wa-teks-profil">
+                                <span class="teks-hijau">Hi</span><br>
+                                <span class="teks-hitam">what can i</span><br>
+                                <span class="teks-hijau">Help You</span>
+                            </p>
+                        </div>
+                        
+                        <a href="https://wa.me/6289531408593" target="_blank" class="wa-qr-box">
+                            <div class="wa-text">
+                                <div class="wa-logo-title">
+                                    <img src="images/icon-wa-logo.png" alt="WhatsApp"> 
+                                </div>
+                                <div class="wa-scan-text">
+                                    <span class="teks-hitam">Scan</span> <span class="teks-putih">Here !</span>
+                                </div>
+                            </div>
+                            <img src="images/qr-code.png" alt="QR Code" class="qr-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

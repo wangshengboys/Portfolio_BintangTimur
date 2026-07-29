@@ -2,7 +2,7 @@
    HALAMAN KONTAK
    ========================================= */
 .contact-section {
-    padding: 120px 5% 80px;
+    padding: 100px 5% 100px;
     background-color: #fdfdfd;
     min-height: 100vh;
 }
@@ -16,23 +16,26 @@ input[name="contact-tab"] {
 .contact-box {
     max-width: 1920px;
     margin: 0 auto;
-    background-color: #d8a01a; 
+    background-color: #d8a01a;
     border-radius: 40px;
     padding: 60px;
     display: flex;
     justify-content: space-between;
-    
+
     /* UBAH BAGIAN INI KING: */
-    align-items: flex-start; /* Ini biar semua konten nempel di atas dan gak loncat-loncat */
-    min-height: 550px; /* Kunci tinggi background-nya biar gak pernah mengecil */
-    
+    align-items: flex-start;
+    /* Ini biar semua konten nempel di atas dan gak loncat-loncat */
+    min-height: 550px;
+    /* Kunci tinggi background-nya biar gak pernah mengecil */
+
     gap: 50px;
-    transition: background-color 0.5s ease; 
+    transition: background-color 0.5s ease;
 }
 
 /* Ubah jadi hijau saat tab WA diklik! */
-#tab-wa:checked ~ .contact-box {
-    background-color: #25D366; /* Hijau khas WhatsApp */
+#tab-wa:checked~.contact-box {
+    background-color: #25D366;
+    /* Hijau khas WhatsApp */
 }
 
 /* --- BAGIAN KIRI (INFO) --- */
@@ -47,7 +50,8 @@ input[name="contact-tab"] {
 }
 
 .contact-info strong {
-    color: white; /* Kata "great" warna putih */
+    color: white;
+    /* Kata "great" warna putih */
 }
 
 .info-list {
@@ -63,27 +67,29 @@ input[name="contact-tab"] {
 }
 
 .info-list img {
-    width: 24px; /* Ukuran icon kecil */
+    width: 24px;
+    /* Ukuran icon kecil */
 }
 
 /* --- BAGIAN KANAN (KARTU PUTIH) --- */
 .contact-card {
     width: 500px;
     background-color: #ffffff;
-    
+
     /* UBAH BARIS INI: Atas-kiri 0, sisanya melengkung 20px */
-    border-radius: 0 20px 20px 20px; 
-    
+    border-radius: 0 20px 20px 20px;
+
     padding: 40px;
-    position: relative; 
-    height: fit-content; 
-    transition: all 0.4s ease; 
+    position: relative;
+    height: fit-content;
+    transition: all 0.4s ease;
 }
 
 /* TAB MENU DESKTOP (Nempel di Kiri) */
 .tabs {
     position: absolute;
-    left: -70px; /* Tarik ke luar garis putih */
+    left: -70px;
+    /* Tarik ke luar garis putih */
     top: 0px;
     display: flex;
     flex-direction: column;
@@ -92,8 +98,10 @@ input[name="contact-tab"] {
 .tab-btn {
     width: 70px;
     height: 60px;
-    background-color: rgba(255, 255, 255, 0.5); /* Putih transparan kalau gak aktif */
-    border-radius: 20px 0 0 20px; /* Sudut lengkung hanya di kiri */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Putih transparan kalau gak aktif */
+    border-radius: 20px 0 0 20px;
+    /* Sudut lengkung hanya di kiri */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,19 +114,25 @@ input[name="contact-tab"] {
 }
 
 /* WARNAI TAB YANG SEDANG AKTIF */
-#tab-email:checked ~ .contact-box .btn-email,
-#tab-wa:checked ~ .contact-box .btn-wa {
+#tab-email:checked~.contact-box .btn-email,
+#tab-wa:checked~.contact-box .btn-wa {
     background-color: #ffffff;
 }
 
 /* LOGIKA MENAMPILKAN KONTEN TAB */
-.content-email, .content-wa {
+.content-email,
+.content-wa {
     display: none;
     animation: fadeIn 0.5s ease;
 }
 
-#tab-email:checked ~ .contact-box .content-email { display: block; }
-#tab-wa:checked ~ .contact-box .content-wa { display: block; }
+#tab-email:checked~.contact-box .content-email {
+    display: block;
+}
+
+#tab-wa:checked~.contact-box .content-wa {
+    display: block;
+}
 
 /* --- STYLE ISI FORM (EMAIL) --- */
 .content-email h3 {
@@ -126,7 +140,11 @@ input[name="contact-tab"] {
     margin-bottom: 30px;
 }
 
-#tab-wa:checked ~ .contact-box .content-email h3 { color: #25D366; } /* Ubah warna teks ngikutin background */
+#tab-wa:checked~.contact-box .content-email h3 {
+    color: #25D366;
+}
+
+/* Ubah warna teks ngikutin background */
 
 .input-group {
     margin-bottom: 25px;
@@ -141,7 +159,8 @@ input[name="contact-tab"] {
 }
 
 /* Style Garis Bawah Form */
-.input-group input, .input-group textarea {
+.input-group input,
+.input-group textarea {
     border: none;
     border-bottom: 1px solid #333;
     padding: 8px 0;
@@ -170,7 +189,11 @@ input[name="contact-tab"] {
     transition: 0.3s;
 }
 
-#tab-wa:checked ~ .contact-box .submit-btn { background-color: #25D366; } /* Tombol jadi hijau juga */
+#tab-wa:checked~.contact-box .submit-btn {
+    background-color: #25D366;
+}
+
+/* Tombol jadi hijau juga */
 
 /* --- STYLE KONTEN WA --- */
 .wa-profil-box {
@@ -187,20 +210,32 @@ input[name="contact-tab"] {
 }
 
 .wa-teks-profil {
-    font-size: 2rem; /* Besarin dikit biar pas */
+    font-size: 2rem;
+    /* Besarin dikit biar pas */
     line-height: 1;
-    font-weight: bold; /* Bikin tebal semua sesuai request king */
+    font-weight: bold;
+    /* Bikin tebal semua sesuai request king */
 }
 
 /* --- KELAS WARNA KHUSUS --- */
-.teks-hijau { color: #25D366; }
-.teks-hitam { color: #111111; }
-.teks-putih { color: #ffffff; }
+.teks-hijau {
+    color: #25D366;
+}
+
+.teks-hitam {
+    color: #111111;
+}
+
+.teks-putih {
+    color: #ffffff;
+}
 
 /* --- UBAH STYLE TEKS SCAN --- */
 .wa-scan-text {
-    font-size: 1.6rem; /* Sesuaikan ukurannya */
-    font-weight: bold; /* Bikin tebal semua */
+    font-size: 1.6rem;
+    /* Sesuaikan ukurannya */
+    font-weight: bold;
+    /* Bikin tebal semua */
 }
 
 .wa-qr-box {
@@ -209,15 +244,15 @@ input[name="contact-tab"] {
     align-items: center;
     background-color: #25D366;
     border-radius: 15px;
-    
+
     /* UBAH BARIS INI: Tambahin padding biar kotaknya makin gemuk ke bawah */
-    padding: 30px 25px; 
-    
+    padding: 30px 25px;
+
     text-decoration: none;
     color: white;
     transition: transform 0.3s;
     width: 100%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .wa-qr-box:hover {
@@ -233,7 +268,8 @@ input[name="contact-tab"] {
 }
 
 .wa-logo-title img {
-    width: 150px; /* <--- Atur angkanya di sini king! Kalau kurang kecil, ganti ke 25px atau 30px */
+    width: 150px;
+    /* <--- Atur angkanya di sini king! Kalau kurang kecil, ganti ke 25px atau 30px */
     height: auto;
 }
 
@@ -244,8 +280,8 @@ input[name="contact-tab"] {
 .qr-img {
     /* UBAH BARIS INI: Tadinya 100px, sekarang kita besarin. 
        (Silakan naikin ke 150px kalau masih kurang gede king!) */
-    width: 170px; 
-    
+    width: 170px;
+
     background: white;
     border-radius: 10px;
 }
@@ -256,13 +292,16 @@ input[name="contact-tab"] {
    ========================================= */
 @media screen and (max-width: 900px) {
     .contact-section {
-        padding: 0; /* Hapus padding agar warna nempel ke atas layar */
+        padding: 0;
+        /* Hapus padding agar warna nempel ke atas layar */
     }
 
     .contact-box {
         flex-direction: column;
-        border-radius: 0; /* Jadikan full screen kaku tanpa sudut */
-        padding: 120px 5% 50px; /* Tambah padding atas agar gak ketutup menu */
+        border-radius: 0;
+        /* Jadikan full screen kaku tanpa sudut */
+        padding: 120px 5% 50px;
+        /* Tambah padding atas agar gak ketutup menu */
         min-height: 100vh;
         gap: 30px;
     }
@@ -272,36 +311,43 @@ input[name="contact-tab"] {
     }
 
     .contact-card {
-        width: 100%; /* Kartu putih penuhi layar kiri-kanan */
-        margin-top: 50px; /* Kasih ruang buat tab pindah ke atas */
+        width: 100%;
+        /* Kartu putih penuhi layar kiri-kanan */
+        margin-top: 50px;
+        /* Kasih ruang buat tab pindah ke atas */
     }
 
     /* UBAH POSISI TAB KE ATAS KARTU */
     .tabs {
-        flex-direction: row; /* Berjejer samping */
-        top: -60px; /* Naik ke atas kartu */
+        flex-direction: row;
+        /* Berjejer samping */
+        top: -60px;
+        /* Naik ke atas kartu */
         left: 0;
     }
 
     .tab-btn {
         width: 80px;
-        border-radius: 20px 20px 0 0; /* Lengkungnya pindah ke atas */
+        border-radius: 20px 20px 0 0;
+        /* Lengkungnya pindah ke atas */
     }
 
     /* 1. Kurangi padding kotak hijau biar gak kesempitan */
     .wa-qr-box {
-        padding: 15px 20px; 
+        padding: 15px 20px;
     }
 
     /* 2. Paksa QR Code diet (mengecil) */
     .qr-img {
-        width: 90px; /* Tadinya 140px, kita susutin biar proporsional */
+        width: 90px;
+        /* Tadinya 140px, kita susutin biar proporsional */
     }
 
     /* 3. Kecilin logo WA dan teks "WhatsApp" */
     .wa-logo-title img {
         width: 120px;
     }
+
     .wa-logo-title {
         font-size: 1rem;
     }

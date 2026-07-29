@@ -6,20 +6,30 @@
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 0px;
+}
+
 body {
-    background-color: #fdfdfd; 
-    color: #111111; /* Warna teks*/
+    background-color: #fdfdfd;
+    color: #111111;
+    /* Warna teks*/
 }
 
 /* --- HEADER & NAVIGASI (Efek Kaca / Glassmorphism) --- */
 .header-glass {
-    position: fixed; /* Bikin menu nempel di atas terus */
+    position: fixed;
+    /* Bikin menu nempel di atas terus */
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.7); /* Transparan */
-    backdrop-filter: blur(12px); /* Efek buram/kaca */
-    border-bottom: 1px solid rgba(0,0,0,0.05); /* Garis halus di bawah menu */
+    background: rgba(255, 255, 255, 0.7);
+    /* Transparan */
+    backdrop-filter: blur(12px);
+    /* Efek buram/kaca */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    /* Garis halus di bawah menu */
 }
 
 nav {
@@ -32,11 +42,13 @@ nav {
 }
 
 nav .logo img {
-    height: 40px; /* Sesuaikan ukuran logomu */
+    height: 40px;
+    /* Sesuaikan ukuran logomu */
 }
 
 .nav-links {
-    list-style: none; /* Menghilangkan titik list bawaan html */
+    list-style: none;
+    /* Menghilangkan titik list bawaan html */
     display: flex;
     gap: 30px;
 }
@@ -49,8 +61,10 @@ nav .logo img {
     transition: color 0.3s;
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: #d4a32a; /* Warna kuning emas */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #d4a32a;
+    /* Warna kuning emas */
 }
 
 /* --- Tombol Bahasa --- */
@@ -69,7 +83,8 @@ nav .logo img {
 
 .btn-lang:hover {
     background: #e2e2e2;
-    transform: scale(1.05); /* Sedikit membesar pas disentuh */
+    transform: scale(1.05);
+    /* Sedikit membesar pas disentuh */
 }
 
 /* Mengatur warna ikon globe mengikuti warna teks */
@@ -82,18 +97,21 @@ nav .logo img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 150px 5% 50px; /* Padding atas besar biar nggak ketutup header */
+    padding: 150px 5% 50px;
+    /* Padding atas besar biar nggak ketutup header */
     max-width: 1920px;
     margin: 0 auto;
     min-height: 100vh;
 }
 
 .hero-left {
-    flex: 1; /* Mengambil ruang di sebelah kiri */
+    flex: 1;
+    /* Mengambil ruang di sebelah kiri */
 }
 
 .hello-img {
-    height: 80px; /* Sesuaikan ukuran gambar hello */
+    height: 80px;
+    /* Sesuaikan ukuran gambar hello */
     margin-bottom: 20px;
 }
 
@@ -104,7 +122,8 @@ nav .logo img {
 }
 
 .highlight {
-    color: #d8a01a; /* Warna kuning teks nama */
+    color: #d8a01a;
+    /* Warna kuning teks nama */
 }
 
 /* --- TOMBOL & SOSMED --- */
@@ -127,7 +146,8 @@ nav .logo img {
 }
 
 .social-links img:hover {
-    transform: translateY(-5px); /* Animasi ikon sosmed naik pas disentuh */
+    transform: translateY(-5px);
+    /* Animasi ikon sosmed naik pas disentuh */
 }
 
 .btn {
@@ -154,7 +174,8 @@ nav .logo img {
 
 .btn-hire:hover {
     background-color: #c08d15;
-    transform: scale(1.05); /* Animasi tombol membesar dikit */
+    transform: scale(1.05);
+    /* Animasi tombol membesar dikit */
 }
 
 /* --- KOTAK EXPERIENCE --- */
@@ -169,12 +190,13 @@ nav .logo img {
 
 .stat-item {
     text-align: center;
-    transition: all 0.3s ease; /* Transisi halus untuk animasi */
+    transition: all 0.3s ease;
+    /* Transisi halus untuk animasi */
 }
 
 /* Ini animasi request king: Teks membesar saat kursor di atasnya */
 .stat-item:hover {
-    transform: scale(1.15); 
+    transform: scale(1.15);
 }
 
 .stat-item h2 {
@@ -205,13 +227,21 @@ nav .logo img {
     max-width: 75%;
     height: auto;
     /* Animasi ringan untuk foto melayang */
-    animation: float 6s ease-in-out infinite; 
+    animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 /* ==============================================================*/
@@ -219,7 +249,8 @@ nav .logo img {
 /* =============================================================*/
 
 /* Sembunyikan checkbox dan ikon hamburger kalau lagi buka di laptop */
-.menu-checkbox, .menu-icon {
+.menu-checkbox,
+.menu-icon {
     display: none;
 }
 
@@ -232,26 +263,29 @@ nav .logo img {
 
 /* SAKLAR AKTIF: Mulai ukuran layar di bawah 900px */
 @media screen and (max-width: 900px) {
-    
+
     /* --- 1. MENGATUR MENU GARIS 3 (HAMBURGER) --- */
     .menu-icon {
-        display: block; /* Munculkan ikon garis 3 */
+        display: block;
+        /* Munculkan ikon garis 3 */
         font-size: 2rem;
         color: #d8a01a;
         cursor: pointer;
     }
 
     .nav-menu {
-        display: none; /* Sembunyikan menu berjejer bawaan desktop */
+        display: none;
+        /* Sembunyikan menu berjejer bawaan desktop */
         flex-direction: column;
         position: absolute;
-        top: 80px; /* Jarak menu dropdown dari atas */
+        top: 80px;
+        /* Jarak menu dropdown dari atas */
         left: 0;
         width: 100%;
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(12px);
         padding: 20px 0;
-        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     }
 
     .nav-menu .nav-links {
@@ -262,47 +296,55 @@ nav .logo img {
     }
 
     /* Kalau ikon diklik (checkbox menyala), tampilkan menu dropdown-nya! */
-    .menu-checkbox:checked ~ .nav-menu {
+    .menu-checkbox:checked~.nav-menu {
         display: flex;
     }
 
 
     /* --- 2. MENYESUAIKAN SUSUNAN KONTEN HERO (Sesuai Desain HP) --- */
     .hero {
-        flex-direction: column; /* Ubah baris (kiri-kanan) jadi kolom (atas-bawah) */
+        flex-direction: column;
+        /* Ubah baris (kiri-kanan) jadi kolom (atas-bawah) */
         padding-top: 120px;
-        text-align: center; /* Bikin semua teks rata tengah */
+        text-align: center;
+        /* Bikin semua teks rata tengah */
     }
 
     /* Trik CSS: 'Memecahkan' bungkus hero-left agar urutan isinya bisa kita atur bebas */
     .hero-left {
-        display: contents; 
+        display: contents;
     }
 
     /* Kita urutkan persis seperti gambaran desainmu king! */
     .hello-img {
-        order: 0; /* Paling atas */
+        order: 0;
+        /* Paling atas */
         margin: 0 auto 10px auto;
     }
 
     .hero h1 {
-        order: 1; /* Urutan ke-1 */
-        font-size: 2rem; /* Kecilkan sedikit fontnya */
+        order: 1;
+        /* Urutan ke-1 */
+        font-size: 2rem;
+        /* Kecilkan sedikit fontnya */
         margin-top: 10px;
     }
 
     .hero-right {
-        order: 2; /* Foto profil pindah ke tengah (di bawah judul) */
+        order: 2;
+        /* Foto profil pindah ke tengah (di bawah judul) */
         justify-content: center;
         margin: 30px 0;
     }
 
     .profile-img {
-        max-width: 90%; /* Biar fotonya pas, tidak kepotongan layar */
+        max-width: 90%;
+        /* Biar fotonya pas, tidak kepotongan layar */
     }
 
     .stats-box {
-        order: 3; /* Kotak experience di bawah foto */
+        order: 3;
+        /* Kotak experience di bawah foto */
         padding: 15px 10px;
         gap: 10px;
         width: 100%;
@@ -310,26 +352,30 @@ nav .logo img {
     }
 
     .stat-item h2 {
-        font-size: 2rem; /* Perkecil font angka */
+        font-size: 2rem;
+        /* Perkecil font angka */
     }
 
     .stat-item p {
-        font-size: 0.8rem; /* Perkecil font teks */
+        font-size: 0.8rem;
+        /* Perkecil font teks */
     }
 
     .action-group {
-        order: 4; /* Tombol dan sosmed letaknya paling bawah */
+        order: 4;
+        /* Tombol dan sosmed letaknya paling bawah */
         justify-content: center;
         margin-top: 30px;
         gap: 15px;
     }
 
-    .social-links img{
+    .social-links img {
         height: 30px;
     }
 
     .btn {
-        padding: 12px 10px; /* Perkecil tombol dikit biar muat di layar HP */
+        padding: 12px 10px;
+        /* Perkecil tombol dikit biar muat di layar HP */
         font-size: 0.7rem;
     }
 }
