@@ -29,4 +29,14 @@ document.addEventListener("DOMContentLoaded", function() {
     sections.forEach(section => {
         observer.observe(section);
     });
+
+    // Tutup menu otomatis di versi mobile saat tautan diklik
+    const menuToggle = document.getElementById("menu-toggle");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            if (menuToggle && menuToggle.checked) {
+                menuToggle.checked = false;
+            }
+        });
+    });
 });
