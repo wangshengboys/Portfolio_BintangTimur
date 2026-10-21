@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const observerOptions = {
         root: null,
-        rootMargin: "0px",
-        threshold: 0.3 // Memicu ketika 30% dari section terlihat
+        rootMargin: "-20% 0px -70% 0px", // Deteksi hanya ketika section berada di paruh atas layar
+        threshold: 0
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
